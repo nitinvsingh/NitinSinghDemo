@@ -6,7 +6,7 @@
 //
 
 
-class Portfolio {
+struct Portfolio {
     var holdings: [Holding] {
         didSet {
             updateTransactionalValue()
@@ -22,7 +22,7 @@ class Portfolio {
         updateTransactionalValue()
     }
     
-    private func updateTransactionalValue() {
+    private mutating func updateTransactionalValue() {
         currentValue = 0.0
         totalInvestment = 0.0
         pnlToday = 0.0
