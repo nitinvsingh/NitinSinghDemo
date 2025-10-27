@@ -9,8 +9,27 @@ import Foundation
 
 struct Holding {
     let symbol: String
-    let quantity: Int
+    let quantity: Double
     let lastTradedPrice: Double
     let averagePrice: Double
     let closingPrice: Double
+}
+
+// MARK: - A Holding's Value
+extension Holding {
+    var currentValue: Double {
+        lastTradedPrice * quantity
+    }
+    
+    var totalInvesetment: Double {
+        averagePrice * quantity
+    }
+    
+    var pnlTotal: Double {
+        currentValue - totalInvesetment
+    }
+    
+    var pnlToday: Double {
+        closingPrice - lastTradedPrice
+    }
 }
