@@ -14,19 +14,11 @@
 			remoteGlobalIDString = 96F5BB8B2EAF70F600D94DE2;
 			remoteInfo = NitinSinghDemo;
 		};
-		96F5BBAD2EAF70F900D94DE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96F5BB842EAF70F600D94DE2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 96F5BB8B2EAF70F600D94DE2;
-			remoteInfo = NitinSinghDemo;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		96F5BB8C2EAF70F600D94DE2 /* NitinSinghDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NitinSinghDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F5BBA22EAF70F900D94DE2 /* NitinSinghDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NitinSinghDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F5BBAC2EAF70F900D94DE2 /* NitinSinghDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NitinSinghDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,11 +45,6 @@
 			path = NitinSinghDemoTests;
 			sourceTree = "<group>";
 		};
-		96F5BBAF2EAF70F900D94DE2 /* NitinSinghDemoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = NitinSinghDemoUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96F5BBA92EAF70F900D94DE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +70,6 @@
 			children = (
 				96F5BB8E2EAF70F600D94DE2 /* NitinSinghDemo */,
 				96F5BBA52EAF70F900D94DE2 /* NitinSinghDemoTests */,
-				96F5BBAF2EAF70F900D94DE2 /* NitinSinghDemoUITests */,
 				96F5BB8D2EAF70F600D94DE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +79,6 @@
 			children = (
 				96F5BB8C2EAF70F600D94DE2 /* NitinSinghDemo.app */,
 				96F5BBA22EAF70F900D94DE2 /* NitinSinghDemoTests.xctest */,
-				96F5BBAC2EAF70F900D94DE2 /* NitinSinghDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,29 +131,6 @@
 			productReference = 96F5BBA22EAF70F900D94DE2 /* NitinSinghDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		96F5BBAB2EAF70F900D94DE2 /* NitinSinghDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96F5BBBD2EAF70F900D94DE2 /* Build configuration list for PBXNativeTarget "NitinSinghDemoUITests" */;
-			buildPhases = (
-				96F5BBA82EAF70F900D94DE2 /* Sources */,
-				96F5BBA92EAF70F900D94DE2 /* Frameworks */,
-				96F5BBAA2EAF70F900D94DE2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				96F5BBAE2EAF70F900D94DE2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				96F5BBAF2EAF70F900D94DE2 /* NitinSinghDemoUITests */,
-			);
-			name = NitinSinghDemoUITests;
-			packageProductDependencies = (
-			);
-			productName = NitinSinghDemoUITests;
-			productReference = 96F5BBAC2EAF70F900D94DE2 /* NitinSinghDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,10 +145,6 @@
 						CreatedOnToolsVersion = 26.0.1;
 					};
 					96F5BBA12EAF70F900D94DE2 = {
-						CreatedOnToolsVersion = 26.0.1;
-						TestTargetID = 96F5BB8B2EAF70F600D94DE2;
-					};
-					96F5BBAB2EAF70F900D94DE2 = {
 						CreatedOnToolsVersion = 26.0.1;
 						TestTargetID = 96F5BB8B2EAF70F600D94DE2;
 					};
@@ -215,7 +166,6 @@
 			targets = (
 				96F5BB8B2EAF70F600D94DE2 /* NitinSinghDemo */,
 				96F5BBA12EAF70F900D94DE2 /* NitinSinghDemoTests */,
-				96F5BBAB2EAF70F900D94DE2 /* NitinSinghDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,13 +179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		96F5BBA02EAF70F900D94DE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96F5BBAA2EAF70F900D94DE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,13 +202,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96F5BBA82EAF70F900D94DE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -273,11 +209,6 @@
 			isa = PBXTargetDependency;
 			target = 96F5BB8B2EAF70F600D94DE2 /* NitinSinghDemo */;
 			targetProxy = 96F5BBA32EAF70F900D94DE2 /* PBXContainerItemProxy */;
-		};
-		96F5BBAE2EAF70F900D94DE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 96F5BB8B2EAF70F600D94DE2 /* NitinSinghDemo */;
-			targetProxy = 96F5BBAD2EAF70F900D94DE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,44 +440,6 @@
 			};
 			name = Release;
 		};
-		96F5BBBE2EAF70F900D94DE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nitinvsingh.NitinSinghDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NitinSinghDemo;
-			};
-			name = Debug;
-		};
-		96F5BBBF2EAF70F900D94DE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nitinvsingh.NitinSinghDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NitinSinghDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,15 +466,6 @@
 			buildConfigurations = (
 				96F5BBBB2EAF70F900D94DE2 /* Debug */,
 				96F5BBBC2EAF70F900D94DE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		96F5BBBD2EAF70F900D94DE2 /* Build configuration list for PBXNativeTarget "NitinSinghDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96F5BBBE2EAF70F900D94DE2 /* Debug */,
-				96F5BBBF2EAF70F900D94DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
