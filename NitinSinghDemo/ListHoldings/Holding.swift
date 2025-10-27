@@ -21,12 +21,12 @@ extension Holding {
         lastTradedPrice * quantity
     }
     
-    var totalInvesetment: Double {
+    var totalInvestment: Double {
         averagePrice * quantity
     }
     
     var pnlTotal: Double {
-        currentValue - totalInvesetment
+        currentValue - totalInvestment
     }
     
     var pnlToday: Double {
