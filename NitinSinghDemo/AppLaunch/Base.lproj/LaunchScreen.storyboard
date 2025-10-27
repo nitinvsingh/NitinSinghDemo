@@ -19,7 +19,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-dF-k4i">
                                 <rect key="frame" x="168.33333333333334" y="397.66666666666669" width="56.666666666666657" height="56.666666666666686"/>
-                                <imageReference key="image" image="indianrupeesign.ring.dashed" catalog="system" renderingMode="template" variableValue="1"/>
+                                <imageReference key="image" image="indianrupeesign.ring.dashed" catalog="system" symbolScale="large" renderingMode="template" variableValue="1"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 </preferredSymbolConfiguration>
