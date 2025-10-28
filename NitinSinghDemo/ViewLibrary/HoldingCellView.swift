@@ -40,7 +40,7 @@ class HoldingCellView: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         symbolValue.translatesAutoresizingMaskIntoConstraints = false
-        symbolValue.font = UIFont.preferredFont(forTextStyle: .headline)
+        symbolValue.font = UIFont.preferredFont(forTextStyle: .title2)
         
         quantityLabel.translatesAutoresizingMaskIntoConstraints = false
         quantityLabel.itemNameLabel.text = "\(quantity)"
@@ -50,12 +50,12 @@ class HoldingCellView: UITableViewCell {
         
         ltpLabel.translatesAutoresizingMaskIntoConstraints = false
         ltpLabel.itemNameLabel.font = UIFont.preferredFont(forTextStyle: .callout)
+        ltpLabel.itemNameLabel.textColor = .systemOrange
         ltpLabel.itemValueLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
-        ltpLabel.itemNameLabel.textColor = .accent
         ltpLabel.itemValueLabel.text = "/ unit"
         
         pnlLabel.translatesAutoresizingMaskIntoConstraints = false
-        pnlLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        pnlLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         pnlLabel.text = "₹\(pnlTotal)"
         
         

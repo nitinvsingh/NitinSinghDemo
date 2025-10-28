@@ -31,6 +31,24 @@ class HoldingsViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var portfolioButton: UIBarButtonItem = {
+        let image = UIImage(systemName: "sum")
+        let btn = UIBarButtonItem(image: image, style: .prominent, target: self, action: #selector(portfolioBtnTapped))
+        return btn
+    }()
+    
+    private lazy var refreshButton: UIBarButtonItem = {
+        
+        let image = UIImage(systemName: "arrow.clockwise")
+        let btn = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(refreshHoldings))
+        return btn
+    }()
+    
+    private lazy var rightBarButtonGroup: UIBarButtonItemGroup = {
+        let group = UIBarButtonItemGroup(barButtonItems: [portfolioButton, refreshButton], representativeItem:  nil)
+        return group
+    }()
+    
     init(viewModel: HoldingsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -42,16 +60,23 @@ class HoldingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Portfolio"
         view.backgroundColor = .systemBackground
         tableView.fill(container: view)
-        
+        navigationItem.title = "Holdings"
+        navigationItem.largeTitle = "Holdings"
+        navigationItem.largeTitleDisplayMode = .inline
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isFirstAppearance {
             getHoldings()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if isFirstAppearance {
+            navigationItem.setRightBarButtonItems([portfolioButton, refreshButton], animated: true)
             isFirstAppearance = false
         }
     }
@@ -85,6 +110,16 @@ class HoldingsViewController: UIViewController {
         } else {
             activityIndicator.removeFromSuperview()
         }
+    }
+    
+    @objc
+    func portfolioBtnTapped() {
+        
+    }
+    
+    @objc
+    func refreshHoldings() {
+        getHoldings()
     }
     
 }
