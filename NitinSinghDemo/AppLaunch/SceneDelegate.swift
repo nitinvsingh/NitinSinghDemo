@@ -15,7 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         scene.delegate = self
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(rootViewController: HoldingsViewController())
+        let apiEndpoint = URL(string: "https://35dee773a9ec441e9f38d5fc249406ce.api.mockbin.io/")!
+        let viewModel = HoldingsViewModel(loader: RemoteHoldingsLoader(url: apiEndpoint))
+        window?.rootViewController = UINavigationController(rootViewController: HoldingsViewController(viewModel: viewModel))
         window?.makeKeyAndVisible()
     }
     
