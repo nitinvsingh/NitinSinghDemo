@@ -26,8 +26,6 @@ class HoldingsViewController: UIViewController {
         tableView.register(HoldingCellView.self, forCellReuseIdentifier: "holdingCell")
         tableView.dataSource = self
         tableView.allowsSelection = false
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 60
         return tableView
     }()
     
@@ -114,7 +112,13 @@ class HoldingsViewController: UIViewController {
     
     @objc
     func portfolioBtnTapped() {
-        
+        let portfolioSummaryViewController = PortfolioSummaryViewController(summary: viewModel.getPortfolioSummary())
+        let navigationController = UINavigationController(rootViewController: portfolioSummaryViewController)
+        if let sheet = navigationController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+        present(navigationController, animated: true, completion: nil)
     }
     
     @objc
