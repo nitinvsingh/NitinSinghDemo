@@ -17,8 +17,9 @@ class PortfolioSummaryViewController: UIViewController {
         trendView.title.text = "TOTAL VALUE"
         trendView.subtitle.text = "₹\(round(summary.currentValue) * 100 / 100.0)"
         let imageName = summary.currentValue < summary.totalInvestment ? "chart.line.downtrend.xyaxis" : "chart.line.uptrend.xyaxis"
-        trendView.trendImageView.image = UIImage(systemName: imageName)?.withTintColor(.systemGreen)
-        
+        trendView.trendImageView.image = UIImage(systemName: imageName)
+        let tintColor = summary.currentValue < summary.totalInvestment ? UIColor.systemRed : .systemGreen
+        trendView.trendImageView.tintColor = tintColor
         trendView.layer.cornerRadius = 15.0
         trendView.backgroundColor = .systemGray3
         return trendView
@@ -30,8 +31,7 @@ class PortfolioSummaryViewController: UIViewController {
         trendView.title.text = "INVESTMENT"
         trendView.subtitle.text = "₹\(round(summary.totalInvestment) * 100 / 100.0)"
         let imageName = "chart.line.flattrend.xyaxis"
-        trendView.trendImageView.image = UIImage(systemName: imageName)?.withTintColor(.systemGreen)
-        
+        trendView.trendImageView.image = UIImage(systemName: imageName)
         trendView.layer.cornerRadius = 15.0
         trendView.backgroundColor = .systemGray3
         return trendView
@@ -43,8 +43,9 @@ class PortfolioSummaryViewController: UIViewController {
         trendView.title.text = "PROFIT TODAY"
         trendView.subtitle.text = "₹\(round(summary.pnlToday) * 100 / 100.0)"
         let imageName = summary.pnlToday < 0 ? "chart.line.downtrend.xyaxis" : "chart.line.uptrend.xyaxis"
-        trendView.trendImageView.image = UIImage(systemName: imageName)?.withTintColor(.systemGreen)
-        
+        trendView.trendImageView.image = UIImage(systemName: imageName)
+        let tintColor = summary.pnlToday < 0 ? UIColor.systemRed : .systemGreen
+        trendView.trendImageView.tintColor = tintColor
         trendView.layer.cornerRadius = 15.0
         trendView.backgroundColor = .systemGray3
         return trendView
@@ -56,8 +57,9 @@ class PortfolioSummaryViewController: UIViewController {
         trendView.title.text = "PROFIT OVERALL"
         trendView.subtitle.text = "₹\(round(summary.pnlTotal) * 100 / 100.0)"
         let imageName = summary.pnlTotal < 0 ? "chart.line.downtrend.xyaxis" : "chart.line.uptrend.xyaxis"
-        trendView.trendImageView.image = UIImage(systemName: imageName)?.withTintColor(.systemGreen)
-        
+        trendView.trendImageView.image = UIImage(systemName: imageName)
+        let tintColor = summary.pnlTotal < 0 ? UIColor.systemRed : .systemGreen
+        trendView.trendImageView.tintColor = tintColor
         trendView.layer.cornerRadius = 15.0
         trendView.backgroundColor = .systemGray3
         return trendView
@@ -102,6 +104,11 @@ class PortfolioSummaryViewController: UIViewController {
             pnlToday.heightAnchor.constraint(equalTo: currentValueView.heightAnchor),
             pnlTotal.heightAnchor.constraint(equalTo: currentValueView.heightAnchor)
         ])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     @objc
